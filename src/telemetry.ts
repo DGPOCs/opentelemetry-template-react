@@ -20,7 +20,7 @@ const resourceSettings = resourceFromAttributes({
   });
 
 const traceExporter = new OTLPTraceExporter({
-  url: "http://otel-collector.observability-project.orb.local:4318/v1/traces",
+  url: `${import.meta.env.OTEL_COLLECTOR_URL}/v1/traces`,
 });
 
 const provider = new WebTracerProvider({ resource: resourceSettings, spanProcessors: [
