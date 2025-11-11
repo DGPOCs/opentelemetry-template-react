@@ -1,7 +1,7 @@
 {
   "name": "opentelemetry-template-react",
   "private": true,
-  "version": "0.0.0",
+  "version": "0.0.1",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -10,6 +10,17 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@opentelemetry/api": "^1.9.0",
+    "@opentelemetry/auto-instrumentations-web": "^0.54.0",
+    "@opentelemetry/context-zone": "^2.2.0",
+    "@opentelemetry/exporter-trace-otlp-http": "^0.208.0",
+    "@opentelemetry/instrumentation": "^0.208.0",
+    "@opentelemetry/instrumentation-document-load": "^0.54.0",
+    "@opentelemetry/instrumentation-fetch": "^0.208.0",
+    "@opentelemetry/instrumentation-user-interaction": "^0.53.0",
+    "@opentelemetry/instrumentation-xml-http-request": "^0.208.0",
+    "@opentelemetry/resources": "^2.2.0",
+    "@opentelemetry/sdk-trace-web": "^2.2.0",
     "clsx": "^2.1.1",
     "react": "^19.2.0",
     "react-dom": "^19.2.0"
