@@ -7,3 +7,6 @@ export const CRYPTO_API_BASE_URL =
 export const DEFAULT_REQUEST_TIMEOUT = Number(
   import.meta.env.VITE_API_TIMEOUT ?? 15000,
 );
+
+export const OTEL_COLLECTOR_URL =
+  import.meta.env.OTEL_COLLECTOR_URL ?? 'http://localhost:4318';

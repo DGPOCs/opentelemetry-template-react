@@ -1,3 +1,5 @@
+
+import { useComponentTracer } from '../../hooks/useTracer';
 import type { Cryptocurrency } from '../../types/crypto';
 import { CryptoCard } from './CryptoCard';
 
@@ -6,6 +8,7 @@ interface CryptoListProps {
 }
 
 export function CryptoList({ items }: CryptoListProps) {
+  useComponentTracer('CryptoList');
   return (
     <div className="crypto-grid">
       {items.map((crypto, index) => (

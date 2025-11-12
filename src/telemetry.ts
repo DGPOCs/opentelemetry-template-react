@@ -12,6 +12,7 @@ import { registerInstrumentations } from "@opentelemetry/instrumentation";
 //exporters
 import { BatchSpanProcessor } from "@opentelemetry/sdk-trace-base";
 import { OTLPTraceExporter } from "@opentelemetry/exporter-trace-otlp-http";
+import { OTEL_COLLECTOR_URL } from "./config/env";
 
 // The SemanticResourceAttributes is an enum that provides a set of predefined attribute keys for commonly used attributes in OpenTelemetry to maintain consistency across different OpenTelemetry implementations
 const resourceSettings = resourceFromAttributes({
@@ -20,7 +21,7 @@ const resourceSettings = resourceFromAttributes({
   });
 
 const traceExporter = new OTLPTraceExporter({
-  url: `${import.meta.env.OTEL_COLLECTOR_URL}/v1/traces`,
+  url: `${OTEL_COLLECTOR_URL}/v1/traces`,
 });
 
 const provider = new WebTracerProvider({ resource: resourceSettings, spanProcessors: [
